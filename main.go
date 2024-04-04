@@ -28,6 +28,12 @@ func init() {
 		Password: "ZGYYfdHk8tb76LZjdhFzmzwRXantEL4O",
 		DB:       0,
 	})
+	pong, err := client.Ping(ctx).Result()
+	if err != nil {
+		fmt.Printf("Failed to connect to Redis: %v\n", err)
+	} else {
+		fmt.Printf("Connected to Redis: %s\n", pong)
+	}
 }
 
 func main() {
