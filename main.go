@@ -45,8 +45,8 @@ func main() {
 	r.HandleFunc("/api/leaderboard", leaderboardHandler).Methods("GET")
 
 	// Start HTTP server
-	fmt.Println("Server is running on port 8080")
-	http.ListenAndServe(":8080", r)
+	fmt.Println("Server is running on port 10000")
+	http.ListenAndServe(":10000", r)
 }
 
 func registerHandler(w http.ResponseWriter, r *http.Request) {
